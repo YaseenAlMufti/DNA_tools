@@ -67,6 +67,15 @@ gc content cutoff: > 50%
 
 observed/expected ratio cutoff: > 0.60
 
+##### Calculations:
+CG content(rounded to 2 decimals) = ((C_content + G_content) / window length (200)) * 100
+
+Observed CG content = all instances of "CG" in window
+
+Expected CG content = (((C_content + G_content) / 2)^2 ) / window length(200)
+
+Observed/Expected(rounded to 2 decimals) = Observed CG content / Expected CG content
+
 Example:
 ```
 with open("sequence.txt", "r") as fin:
